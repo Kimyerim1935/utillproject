@@ -1,0 +1,36 @@
+.sidenavWrapper {
+    /* width: 15%; */
+    width: 300px;
+    max-width: 300px;
+    height: 100vh;
+    margin-top: 50px;
+    position: fixed;
+    z-index: 100;
+    background-color: white;
+    color: black;
+}
+.sidenavWrapper .menuWrapper {
+    cursor: pointer;
+}
+.menuWrapper .titleWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 30px;
+    padding: 10px;
+    height: 30px;
+    font-weight: 700;
+    background-color: #007CC3;
+    color: white;
+}
+.menuWrapper .titleWrapper:hover {
+    background-color: #006199;
+}
+.menuWrapper .subTitleWrapper {
+    /* display: none; */
+    padding: 10px;
+    height: 30px;
+}
+.menuWrapper .subTitleWrapper:hover {
+    background-color: rgb(223, 223, 223);
+}

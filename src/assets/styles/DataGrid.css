@@ -1,0 +1,72 @@
+
+/* single Datatable css */
+
+.single_dataTitle {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 16px;
+}
+
+.single_dataTable {
+    margin-top: 0px;
+    border-top: 1px solid rgb(161, 161, 161);
+    border-left: 1px solid rgb(161, 161, 161);
+    list-style: none;
+    padding: 0;
+}
+
+.single_dataTable .list {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 5px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    background-color: lightgray;
+    border-bottom: 1px solid rgb(161, 161, 161);
+}
+.single_dataTable .textArea {
+    padding-left: 5px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    background-color: lightgray;
+    border-bottom: 1px solid rgb(161, 161, 161);
+}
+.single_dataTable .textArea span {
+    padding: 0 5px;
+}
+
+.single_dataTable .textArea textarea {
+    max-width: 1266px;
+    min-width: 1266px;
+    min-height: 90px;
+    max-height: 90px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    /* margin-bottom: 5px; */
+}
+
+.single_dataTable span {
+    box-sizing: border-box;
+    padding: 0 5px;
+    background-color: white;
+    border-right: 1px solid rgb(161, 161, 161);
+    border-left: 1px solid rgb(161, 161, 161);
+}
+
+.single_dataTable input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 29px;
+    padding-left: 5px;
+}
+
+.single_dataTable select {
+    box-sizing: border-box;
+    width: 100%;
+    height: 33px;
+    padding-left: 5px;
+}
+.single_dataTable button {
+    margin-top: 5px;
+}

@@ -1,0 +1,98 @@
+/* 클래스 상세리스트 메시지 modal */
+
+.messageModal {
+    position: absolute;
+    background: white;
+    border: 1px solid lightgray;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .4);
+    border-radius: 10px;
+    top: 45%;
+    left: 45%;
+    width: 500px;
+    height: 400px;
+    box-sizing: border-box;
+    padding: 25px;
+    text-align: end;
+}
+
+.messageModal textarea {
+    width: 100%;
+    max-width: 440px;
+    min-width: 440px;
+    max-height: 300px;
+    min-height: 300px;
+    margin-bottom: 10px;
+}
+
+/*  클래스 생성 학생 리스트 modal */
+.studentModal {
+    position: absolute;
+    background: white;
+    border: 1px solid lightgray;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .4);
+    border-radius: 10px;
+    top: 35%;
+    left: 60%;
+    /* cursor: move; */
+    width: 500px;
+    box-sizing: border-box;
+    padding: 25px;
+    text-align: end;
+}
+
+/* 관리자 권한 수정 modal */
+.adminRankingModal {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: white;
+    border: 1px solid lightgray;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .4);
+    border-radius: 10px;
+    top: 40%;
+    left: 80%;
+    width: 200px;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+}
+.adminRankingModal label {
+    margin-bottom: 5px;
+}
+.adminRankingModal label + button {
+    margin-top: 10px;
+    width: 60px;
+}
+
+.adminRankingModal input {
+    margin-bottom: 10px;
+}
+.adminRankingModal .title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #474747;
+}
+ /* modal btn css */
+ .cancelBtn {
+    align-self: right;
+    width: 100px;
+    height: 30px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: gray;
+    color: white;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.confirmBtn {
+    width: 100px;
+    height: 30px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: #18288D;
+    color: white;
+    font-weight: 700;
+}

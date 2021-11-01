@@ -3,7 +3,6 @@ import DataTable from '../commons/DataTable';
 import SingleDataTable from '../commons/SingleDataTable';
 import {StudentModal} from '../../utill/Modal';
 import {handleListPage, handleconfirm} from '../../utill/utill';
-import _ from 'lodash';
 
 const ClassProduce = () => {
 
@@ -43,166 +42,199 @@ const ClassProduce = () => {
     const [studentList_rows, setStudentList_rows] = useState([
         {   
             id: 1,
-            'name': '김예림0',
-            'userid': 'yerim98',
+            'name': 'name0',
+            'userid': 'id_00',
             'class': '2/9',
             'select': ''
         },
         {
             id: 2,
-            'name': '김예림1',
-            'userid': 'yerim98',
+            'name': 'name1',
+            'userid': 'id_01',
             'class': '2/9',
             'select': ''
         },
         {
             id: 3,
-            'name': '김예림2',
-            'userid': 'yerim98',
+            'name': 'name2',
+            'userid': 'id_03',
             'class': '2/9',
             'select': ''
         },
         {
             id: 4,
-            'name': '김예림3',
-            'userid': 'yerim98',
+            'name': 'name3',
+            'userid': 'id_04',
             'class': '2/9',
             'select': ''
         },
         {
             id: 5,
-            'name': '김예림4',
-            'userid': 'yerim98',
+            'name': 'name4',
+            'userid': 'id_05',
             'class': '2/9',
             'select': ''
         },
         {
             id: 6,
-            'name': '김예림5',
-            'userid': 'yerim98',
+            'name': 'name5',
+            'userid': 'id_06',
             'class': '2/9',
             'select': ''
         },
         {
             id: 7,
-            'name': '김예림6',
-            'userid': 'yerim98',
+            'name': 'name6',
+            'userid': 'id_07',
             'class': '2/9',
             'select': ''
         }, 
         {
             id: 8,
-            'name': '김예림7',
-            'userid': 'yerim98',
+            'name': 'name7',
+            'userid': 'id_08',
             'class': '2/9',
             'select': ''
         }, 
         {
             id: 9,
-            'name': '김예림8',
-            'userid': 'yerim98',
+            'name': 'name8',
+            'userid': 'id_09',
             'class': '2/9',
             'select': ''
         }, 
         {
             id: 10,
-            'name': '김예림9',
-            'userid': 'yerim98',
+            'name': 'name9',
+            'userid': 'id_10',
             'class': '2/9',
             'select': ''
         }, 
         {
             id: 11,
-            'name': '김예림10',
-            'userid': 'yerim98',
+            'name': 'name10',
+            'userid': 'id_11',
             'class': '2/9',
             'select': ''
         }, 
         {
             id: 12,
-            'name': '김예림11',
-            'userid': 'yerim98',
+            'name': 'name11',
+            'userid': 'id_12',
+            'class': '2/9',
+            'select': ''
+        }, 
+        {
+            id: 13,
+            'name': 'name12',
+            'userid': 'id_13',
+            'class': '2/9',
+            'select': ''
+        }, 
+        {
+            id: 14,
+            'name': 'name13',
+            'userid': 'id_14',
+            'class': '2/9',
+            'select': ''
+        }, 
+        {
+            id: 15,
+            'name': 'name14',
+            'userid': 'id_15',
+            'class': '2/9',
+            'select': ''
+        }, 
+        {
+            id: 16,
+            'name': 'name15',
+            'userid': 'id_16',
             'class': '2/9',
             'select': ''
         }
     ])
 
-    const [deleteList, setDeleteList] = useState([]);
+    const deleteList = [];
 
     const [checked, setChecked] = useState(false);
 
     const [selectItem, setSelectItem] = useState([]);
+
     const [newClass, setNewClass] = useState({
             className: '',
             subjectName: '',
             subjectContents: '',
             selectSubject : -1,
             createTeam: [
-                // [
-                //     {
-                //         id: 1,
-                //         'name': '김예림0',
-                //         'userid': 'yerim98',
-                //         'class': '2/9',
-                //         'select': ''
-                //     },
-                //     {
-                //         id: 2,
-                //         'name': '김예림1',
-                //         'userid': 'yerim98',
-                //         'class': '2/9',
-                //         'select': ''
-                //     },
-                //     {
-                //         id: 3,
-                //         'name': '김예림2',
-                //         'userid': 'yerim98',
-                //         'class': '2/9',
-                //         'select': ''
-                //     },
-                //     {
-                //         id: 4,
-                //         'name': '김예림3',
-                //         'userid': 'yerim98',
-                //         'class': '2/9',
-                //         'select': ''
-                //     },
-                // ],
-                // [
-                //     {
-                //         id: 5,
-                //         'name': '김예림4',
-                //         'userid': 'yerim98',
-                //         'class': '2/9',
-                //         'select': ''
-                //     },
-                //     {
-                //         id: 6,
-                //         'name': '김예림5',
-                //         'userid': 'yerim98',
-                //         'class': '2/9',
-                //         'select': ''
-                //     },
-                //     {
-                //         id: 7,
-                //         'name': '김예림6',
-                //         'userid': 'yerim98',
-                //         'class': '2/9',
-                //         'select': ''
-                //     },
-                //     {
-                //         id: 8,
-                //         'name': '김예림7',
-                //         'userid': 'yerim98',
-                //         'class': '2/9',
-                //         'select': ''
-                //     }
-                // ],
+                [
+                    {   
+                        id: 1,
+                        'name': 'name0',
+                        'userid': 'id_00',
+                        'class': '2/9',
+                        'select': ''
+                    },
+                    {
+                        id: 2,
+                        'name': 'name1',
+                        'userid': 'id_01',
+                        'class': '2/9',
+                        'select': ''
+                    },
+                    {
+                        id: 3,
+                        'name': 'name2',
+                        'userid': 'id_03',
+                        'class': '2/9',
+                        'select': ''
+                    },
+                    {
+                        id: 4,
+                        'name': 'name3',
+                        'userid': 'id_04',
+                        'class': '2/9',
+                        'select': ''
+                    },
+                ],
+                [
+                    {
+                        id: 5,
+                        'name': 'name4',
+                        'userid': 'id_05',
+                        'class': '2/9',
+                        'select': ''
+                    },
+                    {
+                        id: 6,
+                        'name': 'name5',
+                        'userid': 'id_06',
+                        'class': '2/9',
+                        'select': ''
+                    },
+                    {
+                        id: 7,
+                        'name': 'name6',
+                        'userid': 'id_07',
+                        'class': '2/9',
+                        'select': ''
+                    }, 
+                    {
+                        id: 8,
+                        'name': 'name7',
+                        'userid': 'id_08',
+                        'class': '2/9',
+                        'select': ''
+                    }, 
+                ],
             ]
         });
 
     const [openModal, setOpenModal] = useState(false);
     const [teamList, setTeamList] = useState([]);
+ 
+    useEffect(() => {
+        handleFilter()
+    },[])
 
     useEffect(()=>{
         setSelectItem([])
@@ -218,6 +250,21 @@ const ClassProduce = () => {
         setOpenModal(false);
         setTeamList(newClass.createTeam)
     },[newClass.createTeam])
+
+    const handleFilter = () => {
+        let newStudent = studentList_rows.slice();
+
+        if (newClass.createTeam.length !== 0) {
+            newClass.createTeam.map((i)=> {
+                return i.map((l)=> {
+                    return newStudent = newStudent.filter((item)=> {
+                        return item.name !== l.name
+                    })
+                })
+            })
+        }
+        setStudentList_rows(newStudent)
+    }
 
     const handleModal = () => {
         setOpenModal(true);
@@ -284,19 +331,31 @@ const ClassProduce = () => {
         if (selectItem.length === 4 || selectItem.length === 5) {
             const result = window.confirm('조를 편성하시겠습니까?');
             if (result) {
-                newClass.createTeam.push(selectItem)
-                setSelectItem([]);
-
                 let newStudent = studentList_rows.slice();
-                
-                for (let i = 0; i < selectItem.length ; i++) {
-                    newStudent = newStudent.filter((data) => {
+                let newTeam = [];
+
+                for (let i = 0; i < selectItem.length; i++) {
+                    newStudent.map((data) => {
                         if (data.name === selectItem[i]) {
-                            deleteList.push(data)
+                            deleteList.push(data);
+                            newTeam.push(data)
                         }
-                        return (data.name !== selectItem[i]) 
+                        return data.name !== selectItem[i]
                     })
                 }
+
+                setSelectItem([]);
+
+                newClass.createTeam.push(newTeam)
+
+                newClass.createTeam.map((i)=> {
+                    return i.map((l)=> {
+                        return newStudent = newStudent.filter((item)=> {
+                            return item.name !== l.name
+                        })
+                    })
+                })
+
                 setStudentList_rows(newStudent)
             }
         } else {
@@ -310,19 +369,15 @@ const ClassProduce = () => {
         if (deleteItem.includes(item)) {
             deleteItem.splice(idx, 1)
         }
-
+        
+        item.map((data) => {
+            return studentList_rows.push(data)
+        })
+        
         setNewClass({
             createTeam : deleteItem
         })
         setOpenModal(false);
-
-        for (let i = 0; i < item.length; i++) {
-            deleteList.filter((data) => {
-                if (data.name === item[i]){
-                    return studentList_rows.push(deleteList.splice(item[i], 1)[0]) 
-                }
-            })
-        }
     }
 
     return (

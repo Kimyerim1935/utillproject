@@ -316,10 +316,6 @@ const ClassProduce = () => {
         if (checked) {
             selectItem.push(id)
             setSelectItem(selectItem);
-            // if (selectItem.length > 5) {
-            //     alert('최대 5명까지만 선택 가능합니다.')
-            //     selectItem.pop(id);
-            // }
         } else if (!checked && selectItem.includes(id)) {
             selectItem.pop(id);
             setSelectItem(selectItem);

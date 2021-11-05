@@ -9,7 +9,9 @@
 }
 
 .single_dataTable {
+    width: 1000px;
     margin-top: 0px;
+    margin-left: 335px;
     border-top: 1px solid rgb(161, 161, 161);
     border-left: 1px solid rgb(161, 161, 161);
     list-style: none;
@@ -69,4 +71,244 @@
 }
 .single_dataTable button {
     margin-top: 5px;
+}
+
+
+/*dashboard dataTable css  */
+.customDataGridArea {
+    border-top: 0.1px solid rgb(221,221,221);
+    border-left: 0.1px solid rgb(221,221,221);
+    font-size: 15px;
+    margin: 10px 0;
+}
+.customDataGridArea_dataNull {
+    text-align:center;
+    padding:50px;
+    border-right: 0.1px solid rgb(221,221,221);
+    border-bottom: 0.1px solid rgb(221,221,221);
+    border-left: 0.1px solid rgb(221,221,221);
+}
+.customDataGrid_all{
+    border: 0.1px solid rgb(221,221,221);
+    font-size: 15px;
+    margin: 10px 0;
+}
+
+.customGrid {
+    display:flex;
+    line-height:40px;
+    color:#333333;
+}
+
+.customGrid li {
+    list-style: none;
+}
+
+.customGrid .row{
+    padding:0 10px;
+    width: 300px;
+    flex-direction: row;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-right: 0.2px solid #e0e0e0;
+    border-bottom: 0.2px solid #e0e0e0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.customGrid .row.left{
+    border-left: 0.2px solid #e0e0e0;
+}
+
+.customGrid .row.num {
+    width: 60px;
+}
+
+.customGrid .row.progress {
+    width: 120px;
+}
+.customGrid .row.classTitle {
+    width: 600px;
+    max-width: 600px;
+}
+.customGrid .row.noticeTitle {
+    width: 100%;
+    max-width: 100%;
+}
+.customGrid .row.middle {
+    width: 120px;
+    max-width: 120px;
+}
+
+.customGrid.top{
+    background-color: rgb(226, 226, 226);
+    border-bottom: 2px solid #6a6a6a;
+    margin: 0;
+    padding: 0;
+}
+
+/* half dataTable css */
+.dataTitle {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 16px;
+}
+
+.dataTable {
+    margin-top: 0px;
+    border-top: 1px solid rgb(161, 161, 161);
+    border-left: 1px solid rgb(161, 161, 161);
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.dataTable li {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 5px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: lightgray;
+    border-bottom: 1px solid rgb(161, 161, 161);
+}
+.dataTable span {
+    padding-left: 5px;
+    background-color: white;
+    border-right: 1px solid rgb(161, 161, 161);
+    border-left: 1px solid rgb(161, 161, 161);
+}
+.dataTable input {
+    width: 80%;
+    height: 29px;
+    padding-left: 5px;
+}
+
+/* single Datatable css */
+
+.single_dataTitle {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 16px;
+}
+
+.single_dataTable {
+    margin-top: 0px;
+    border-top: 1px solid rgb(161, 161, 161);
+    border-left: 1px solid rgb(161, 161, 161);
+    list-style: none;
+    padding: 0;
+}
+
+.single_dataTable .list {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 5px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    background-color: lightgray;
+    border-bottom: 1px solid rgb(161, 161, 161);
+}
+.single_dataTable .textArea {
+    padding-left: 5px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    background-color: lightgray;
+    border-bottom: 1px solid rgb(161, 161, 161);
+}
+.single_dataTable .textArea span {
+    padding: 0 5px;
+}
+
+.single_dataTable .textArea textarea {
+    max-width: 1266px;
+    min-width: 1266px;
+    min-height: 90px;
+    max-height: 90px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    /* margin-bottom: 5px; */
+}
+.single_dataTable .teamArea {
+    padding-left: 5px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    background-color: lightgray;
+    border-bottom: 1px solid rgb(161, 161, 161);
+}
+.single_dataTable .teamArea span {
+    display: block;
+}
+.single_dataTable .teamArea span > span {
+    margin-top: 10px;
+}
+.single_dataTable .teamArea span > span > img {
+    width: 16px;
+    margin-left: 5px;
+}
+.single_dataTable span {
+    box-sizing: border-box;
+    padding: 0 5px;
+    background-color: white;
+    border-right: 1px solid rgb(161, 161, 161);
+    border-left: 1px solid rgb(161, 161, 161);
+}
+.single_dataTable span > span {
+    border-right: 0px;
+    border-left: 0px;
+}
+.single_dataTable input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 29px;
+    padding-left: 5px;
+}
+
+.single_dataTable select {
+    box-sizing: border-box;
+    width: 100%;
+    height: 33px;
+    padding-left: 5px;
+}
+.single_dataTable button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* pagination dataTable css */
+
+.dataGridArea {
+    min-width: 1200px;
+    border-top: 0.1px solid rgb(221,221,221);
+    font-size: 15px;
+    margin: 10px 0 0 0;
+}
+.customGrid.toLink:hover{
+    background: rgba(239, 246, 252, 1);
+    filter: none;
+}
+.customGrid.content{
+}
+
+.gridBtn {
+    height: 30px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: #18288D;
+    color: white;
+    font-weight: 700;
+}
+.gridBtn_admin {
+    width: 50px;
+    height: 30px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: #18288D;
+    color: white;
+    font-weight: 700;
+    margin-left: 20px;
 }

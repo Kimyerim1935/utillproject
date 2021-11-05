@@ -49,19 +49,19 @@ const SingleDataTable = (props) => {
                                             {
                                                 teamList && 
                                                 teamList.map((item, idx) => {
-                                                    return <span style={{display:'block'}} key={idx}>{Object.values(item)}<img src={Delete} alt="icon" onClick={()=>deleteTeam(idx, item)}/></span>
+                                                    // return <span style={{display:'block'}} key={idx}>{Object.values(item)}<img src={Delete} alt="icon" onClick={()=>deleteTeam(idx, item)}/></span>
 
-                                                    // return(
-                                                    //     item[idx] ?
-                                                    //         <span key={idx}>
-                                                    //             { 
-                                                    //                 item.map((team) => {
-                                                    //                     return Object.values(team.name)
-                                                    //                 })
-                                                    //             }
-                                                    //             <img src={Delete} alt="icon" onClick={()=>deleteTeam(idx, item)}/>
-                                                    //         </span>
-                                                    // ) 
+                                                    return(
+                                                        item[idx] &&
+                                                            <span key={idx}>
+                                                                { 
+                                                                    item.map((team) => {
+                                                                        return Object.values(team.name)
+                                                                    })
+                                                                }
+                                                                <img src={Delete} alt="icon" onClick={()=>deleteTeam(idx, item)}/>
+                                                            </span>
+                                                    ) 
                                                 })
                                             }
                                             <button 

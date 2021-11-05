@@ -1,5 +1,5 @@
 import React from 'react';
-import DashboardDataGrid from '../Component/commons/DashboardDataGrid';
+import DashboardDataGrid from '../DataGrid/DashboardDataGrid';
 
 export const MessageModal = ({messageContents,closeModal,sendMessage}) => {
     return (
@@ -16,7 +16,7 @@ export const MessageModal = ({messageContents,closeModal,sendMessage}) => {
     )
 }
 
-export const StudentModal = ({closeModal, columns, rows, checkItem}) => {
+export const StudentModal = ({closeModal, columns, rows, checkItem, createTeam}) => {
     return (
         <div className="studentModal">
             <DashboardDataGrid 
@@ -29,7 +29,7 @@ export const StudentModal = ({closeModal, columns, rows, checkItem}) => {
                 onClick={()=>closeModal()}>취소</button>
             <button 
                 className="confirmBtn"
-                onClick={()=>console.log('조편성하기')}>조편성 하기</button>
+                onClick={()=>createTeam()}>조편성 하기</button>
         </div>
     )
 }

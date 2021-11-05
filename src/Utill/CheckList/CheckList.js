@@ -1,37 +1,15 @@
 import React, {useEffect, useState} from 'react';
-import DataTable from '../commons/DataTable';
-import SingleDataTable from '../commons/SingleDataTable';
-import {StudentModal} from '../../utill/Modal';
-import {handleListPage, handleconfirm} from '../../utill/utill';
+import DataTable from '../DataGrid/DataTable';
+import SingleDataTable from '../DataGrid/SingleDataTable';
+import {StudentModal} from '../Modal/Modal';
+// import {handleListPage, handleconfirm} from '../../utill/utill';
 
 const ClassProduce = () => {
 
-    const managerInfo = {
-        name : '김예림',
-        grade: '2/9',
-        id: 'yerim98'
-    }
-    const classData = [
-        { id: 'input',title: '클래스명', type: 'className' },
-        { title: '담당자', info: managerInfo.name },
-        { title: '학년/반', info: managerInfo.grade  },
-        { title: '담당자 아이디', info: managerInfo.id  },
-    ]
-
     const subjectData = [
-        { id: 'input', title: '과업명', type: 'subjectName'},
-        { id: 'textArea', title: '과업내용', type: 'subjectContents'},
-        { id: 'select', title: '과업선택', type: 'selectSubject'},
         { id: 'modal', title: '조편성', type: 'createteam'},
     ]
 
-    const selectData = [
-        { id: 1, title: '지하철 불끄기'},
-        { id: 2, title: '개찰구 불끄기'},
-        { id: 3, title: '승강장 불끄기'},
-        { id: 4, title: '역무원실 불끄기'},
-        { id: 5, title: '화장실 불끄기'},
-    ]
     const studentList_columns = [
         { field: 'name', headerName: '이름' },
         { field: 'userid', headerName: '아이디' },
@@ -161,10 +139,6 @@ const ClassProduce = () => {
     const [selectItem, setSelectItem] = useState([]);
 
     const [newClass, setNewClass] = useState({
-            className: '',
-            subjectName: '',
-            subjectContents: '',
-            selectSubject : -1,
             createTeam: [
                 [
                     {   
@@ -279,34 +253,6 @@ const ClassProduce = () => {
         } else setOpenModal(false)
     }
 
-    const handleClassName = (data, type) => {
-        switch (type) {
-            case 'className': {
-                setNewClass(prev => ({...prev,
-                    className: data}))
-                break;
-            }
-            case 'subjectName': {
-                setNewClass(prev => ({...prev,
-                    subjectName: data}))
-                break;
-            }
-            case 'subjectContents': {
-                setNewClass(prev => ({...prev,
-                    subjectContents: data}))
-                break;
-            }
-            case 'selectSubject': {
-                setNewClass(prev => ({...prev,
-                    selectSubject: data}))
-                break;
-            }
-            default: {
-                break;
-            }
-        }
-    }
-
     const handleCheck = ({target}) => {
             setChecked(!checked)
             checkedItemHandler(target.value, target.checked)
@@ -378,18 +324,12 @@ const ClassProduce = () => {
 
     return (
         <div className="noneContainerWrapper">
-            <span className="title">■ 클래스 상세</span>
-            <DataTable
-                title="클래스 기본정보"
-                data={classData}
-                newClass={handleClassName}
-            />
+            <span className="title">■ 체크리스트</span>
+            
             <SingleDataTable 
-                title="과업정보"
+                title="체크리스트 항목"
                 data={subjectData}
-                selectList={selectData}
                 teamList={teamList}
-                changeData={handleClassName}
                 openModal={handleModal}
                 deleteTeam={handleClassDelete}
             />
@@ -404,14 +344,14 @@ const ClassProduce = () => {
                     createTeam={handleClassCreate}
                     />
             }
-            <button 
+            {/* <button 
                 className="listbutton"
                 onClick={()=>handleconfirm('/Class', '해당클래스를 생성하시겠습니까?')}
                 >생성</button>
             <button 
                 className="list_backButton"
                 onClick={()=>handleListPage('/Class')}
-            >뒤로</button>
+            >뒤로</button> */}
         </div>
     )
 }

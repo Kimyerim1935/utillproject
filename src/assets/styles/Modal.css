@@ -96,3 +96,69 @@
     color: white;
     font-weight: 700;
 }
+
+
+/* 채팅 컴포넌트 css */
+
+.ChatWrapper {
+    box-sizing: border-box;
+    padding : 10px;
+    width: 400px;
+    height: 600px;
+    bottom : 5%;
+    right: 2%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .6);
+}
+.ChatWrapper .chatList {
+    height: 92%;
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.ChatWrapper .chatList::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+.ChatWrapper .chatArea {
+    margin-top: 10px;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ChatWrapper .chatArea input {
+    height: 30px;
+    width: 80%;
+    outline: none;
+}
+.ChatWrapper .chatArea button {
+    width: 15%;
+    height: 35px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: #18288D;
+    color: white;
+    font-weight: 700;
+}
+.ChatWrapper .chatContents {
+    display: flex;
+    justify-content: space-between;
+}
+.ChatWrapper .chatContents .id {
+    font-size: 18px;
+    font-weight: 700;
+    color: white
+}
+.chatContents .chat {
+    width: 160px;
+    overflow: hidden;
+    margin-left: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+.chatContents .date {
+    margin-left: 10px;
+}

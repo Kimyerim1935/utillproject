@@ -1,0 +1,63 @@
+
+/* admin & student produce */
+.guideText {
+    display: block;
+    color: red;
+}
+.produceWrapper {
+    min-height: 60px;
+    display: flex;
+    flex-direction: row;
+    /* line-height: 80px; */
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: lightgray;
+    /* border: 1px solid lightgray; */
+}
+.produceWrapper span {
+    margin-right: 10px;
+}
+.produceWrapper span > input{
+    margin-left: 5px;
+}
+.produceWrapper div {
+    flex-direction: column;
+    display: block;
+}
+.produceWrapper div .delete {
+    width: 30px;
+    height: 20px;
+    padding: 0px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.produceWrapper span + span {
+    margin-right: 20px;
+}
+.produceWrapper label {
+    margin-right: 30px;
+}
+
+.produceWrapper .search {
+    width: 500px;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+
+.produceWrapper button {
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 10px;
+    box-sizing: border-box;
+    padding: 5px;
+    background-color: #18288D;
+    color: white;
+}

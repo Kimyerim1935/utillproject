@@ -102,20 +102,23 @@
 
 .ChatWrapper {
     box-sizing: border-box;
+    margin-top: 60px;
+    margin-bottom: 10px;
     padding : 10px;
-    width: 400px;
-    height: 600px;
+    width: 100%;
+    height: 300px;
     bottom : 5%;
     right: 2%;
-    position: absolute;
+    /* position: absolute; */
     background-color: rgba(0, 0, 0, .6);
 }
 .ChatWrapper .chatList {
-    height: 92%;
+    height: 83%;
     overflow-y: scroll;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
 }
+
 .ChatWrapper .chatList::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera*/
 }
@@ -147,13 +150,23 @@
     display: flex;
     justify-content: space-between;
 }
+.ChatWrapper .chatContents li{
+    width: 100%;
+    list-style-type: none;
+}
+.ChatWrapper .chatContents li.left {
+    text-align: left;
+}
+.ChatWrapper .chatContents li.right {
+    text-align: right;
+}
 .ChatWrapper .chatContents .id {
     font-size: 18px;
     font-weight: 700;
     color: white
 }
 .chatContents .chat {
-    width: 160px;
+    min-width: 300px;
     overflow: hidden;
     margin-left: 10px;
     text-overflow: ellipsis;

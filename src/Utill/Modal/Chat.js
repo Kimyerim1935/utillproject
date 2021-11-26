@@ -1,39 +1,47 @@
 import React, {useState, useEffect, useRef} from 'react';
 import moment from 'moment';
+import { managerInfo } from '../Component/SampleData/userSample';
 
 const Chat = () => {
     const [chatList, setChatList] = useState([
         {
-            no: 1,
+            role: 'student',
             id: 'student1',
-            chat: 'hahahahahaha',
+            chat: '안녕하세요',
             date: '11-16 15:34:49'
         },
         {
-            no: 2,
+            role: 'student',
             id: 'student2',
-            chat: 'hahaha',
+            chat: '안녕하세요',
             date: '11-16 15:34:49'
         },
         {
-            no: 3,
+            role: 'student',
             id: 'student3',
-            chat: 'hahaha',
+            chat: '안녕하세요',
             date: '11-16 15:34:49'
         },
         {
-            no: 4,
+            role: 'teacher',
+            id: managerInfo.id,
+            chat: '안녕',
+            date: '11-16 15:34:49'
+        },
+        {
+            role:'student',
             id: 'student4',
-            chat: 'hahaha',
+            chat: '안녕하세요',
             date: '11-16 15:34:49'
         },
         {
-            no: 5,
-            id: 'student5',
-            chat: 'hahaha',
+            role: 'teacher',
+            id: managerInfo.id,
+            chat: '애들아 안녕',
             date: '11-16 15:34:49'
         },
     ]);
+
     const [chatContents, setChatContents] = useState('');
     const chatInput = useRef();
     const nowTime = moment().format('MM-DD HH:mm:ss');
@@ -50,25 +58,21 @@ const Chat = () => {
     }
 
     const handleAddChat = () => {
-        if (chatContents.length === 0) {
-            alert('채팅 내용을 입력해주세요')
-        } else {
-            setChatList(prev => [...prev,
+        setChatList(prev => [...prev,
                 {
-                    no: chatList.length + 1,
-                    id: `student${chatList.length+1}`,
+                    role:'teacher',
+                    id: managerInfo.id,
                     chat: chatContents,
                     date: nowTime
                 }
-            ])
-        }
+        ])
     }
     
     const scrollToBottom = () => {
         const {scrollHeight, clientHeight} = chatInput.current;
         chatInput.current.scrollTop = scrollHeight - clientHeight
     }
-    
+
     return (
         <div className="ChatWrapper">
             <div className="chatList" ref={chatInput}>
@@ -76,9 +80,11 @@ const Chat = () => {
                     chatList.map((item) => {
                         return (
                             <div className="chatContents">
-                                <span className="id">{item.id}</span>
-                                <span className="chat">{item.chat}</span>
-                                <span className="date">{item.date}</span>
+                                <li className={item.role === 'student' ? 'left' : 'right'}>
+                                    <span className="id">{item.id}</span>
+                                    <span className="chat">{item.chat}</span>
+                                    <span className="date">{item.date}</span>
+                                </li>
                             </div>
                         )
                     })

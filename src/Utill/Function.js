@@ -34,3 +34,7 @@ export const textNullCheck = (value) => {
         return value;
     }
 }
+
+export const handleNumber = (page, index) => { 
+    return index + (page * 10) + 1
+}
